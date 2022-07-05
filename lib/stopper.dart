@@ -97,7 +97,7 @@ class StopperState extends State<Stopper> with SingleTickerProviderStateMixin {
   void didUpdateWidget(Stopper oldWidget) {
     super.didUpdateWidget(oldWidget);
     this._stops = widget.stops;
-    this._currentStop = min(_currentStop, _stops.length - 1);
+    this._currentStop = min(widget.initialStop, _stops.length - 1);
     this._targetStop = min(_currentStop, _stops.length - 1);
   }
 
